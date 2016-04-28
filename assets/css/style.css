@@ -5,6 +5,10 @@
           
 }
 
+html, body {
+	height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
 }
@@ -15,10 +19,9 @@ h1 {
 
 }
 
-
 h2 {
 	color: #4aaaa5;
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 1.25;
 	margin-top: 0px;
 	margin-bottom: 20px;
@@ -26,8 +29,11 @@ h2 {
 }
 
 h4 {
+	color: #4aaaa5;
+	font-size: 22px;
+	margin-top: 0px;
+	margin-bottom: 20px;
 	font-weight: bold;
-	font-size: 18px;
 }
 
 hr {
@@ -36,22 +42,24 @@ hr {
 	margin-bottom: 22px;
 }
 
-html, body {
-	height: 100%;
-}
-
 body {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	background-image: url("../images/pixel_weave-bg.png");
 	margin: 0;
 	padding: 0;     
-	min-height: 100%; 
-	height: 100%;  
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -90px;
 }
 
 p {
 	color: #777777;
-	line-height: 1.5;
+	line-height: 2;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	font-size: 16px;
 }
 
 /****  Header  ****/
@@ -64,7 +72,6 @@ header {
 	clear: both;
 	margin-bottom: 35px;
 }
-
 
 #nameWrap {
 	margin: 0 auto;
@@ -85,29 +92,37 @@ header {
 .nav {
 	float: right;
 	margin-top: 35px;
+	font-size: 18px;
 }
 
 .nav a {
   text-decoration: none;
-  color: #CFCFCF;
+  color: #777777;
   display: block;
   padding: 0 10px;
+  border-right: 1px solid #DDDDDD;
+  
+}
+
+.nav li:last-child a {
+	padding-right: 0px;
+	border-right: none;
+	
+}
+
+.nav a:hover {
+	color:#FF5700;
 }
 
 .nav li {
     display: inline-block;
-    border-right: 1px solid #DDDDDD;
- }
-
- .nav li:last-child {
- 	border-right: none;
+    
+    
  }
 
 .nav ul {
 	list-style: none;
 	text-align: center;
-	padding: 0;
-	margin: 0;
 }
 
 #profilePic {
@@ -116,46 +131,47 @@ header {
 	border-radius: 5px;
 	float:left;
 	margin-right: 20px;
+	margin-bottom: 10px;
 	box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.4);
 
 }
 
-#socialBtns {
-	width: 270px;
-    margin-top:90px;
-	
+#thicker {
+	border: 2px solid #DDDDDD;
+	margin-bottom: 22px;
 }
 
-#socialIcon {
+
+
+.socialIcon {
 	width: 60px;
 	height: 60px;
-	margin-right: 13px;
 }
 
-#socialIcon:last-child {
+.socialBtns a {
+	margin-right: 8px;
+}
+
+.socialBtns a:last-child {
 	margin-right: 0px;
 }
 
-h4 {
-	color: #4aaaa5;
-	font-size: 24px;
-	margin-top: 0px;
-	margin-bottom: 20px;
+.socialBtns a:hover {
+	-webkit-filter: opacity(70%);
 }
 
-.content {
-	padding: 0;
-	max-width: 960px;
-	margin: 0 auto;
-}
+
+/* Main Content Containers */
+
 section {
-	padding: 20px;
+	padding: 30px;
 	background: #fff;
 	border: 1px solid #DDDDDD;
 }
 
 .main {
 	max-width: 650px;
+	width: 650px;
 	float: left;
 }
 
@@ -164,26 +180,151 @@ section {
 	float: right;
 }
 
-footer {
+.content {
+	padding: 0;
+	max-width: 960px;
+	margin: 0px auto 0px;
+}
+
+/* Contact Form Elements */
+
+form label {
+	color: #777777;
+	display: block;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+form input {
+	width: 100%;
+	height: 35px;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #777777;
+	padding-left: 10px;
+}
+
+::-webkit-input-placeholder {
+   color: #CCCCCC;
+}
+
+form textarea {
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	height: 200px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #777777;
+	padding: 10px 0px 0px 10px;
+	line-height: 21px;
+}
+
+#formBtn {
+	background: #4aaaa5;
+	color: #fff;
+	text-align:center;
+	width: 115px;
+	height: 40px;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+}
+
+#formBtn:hover {
+	background: #FF5700;
+}
+
+
+/* Portfolio Images */
+
+.portfolioPicLeft {
+	width: 275px;
+	height: 205px;
+	float: left;
+	margin-bottom: 55px;
+	background-size: cover;
+  	position: relative;
+  	display: inline;
+}
+
+.portfolioPicRight {
+	width: 275px;
+	height: 205px;
+	float: right;
+	margin-bottom: 55px;
+	background-size: cover;
+  	position: relative;
+  	display: inline;
+}
+
+.last {
+	margin-bottom: 0px;
+}
+
+.top {
+	margin-top: 20px;
+}
+
+.tiger {
+	background-image: url(../images/tiger.jpg);
+	
+}
+
+.cycling {
+	background-image: url(../images/cycling.jpg);
+}
+
+.mini-cooper {
+	background-image: url(../images/mini-cooper.jpg);
+}
+
+.peppers {
+	background-image: url(../images/peppers.jpg);
+}
+
+.rhino {
+	background-image: url(../images/rhinoceros.jpg);
+}
+
+.swimming {
+	background-image: url(../images/swimming.jpg);
+}
+
+.imgText {
+	font-size: 24px;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	background: #4aaaa5;
+	color: #FFFFFF;
+	font-weight: normal;
+	height: 60px;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+	position: absolute;
+}
+
+
+/* Footer Styles */
+
+.footer {
 	width: 100%;
 	background: #666666;
 	border-top: 10px solid #4aaaa5;
 	height: 90px;
 	clear: both;
+	margin-top: 35px;
 }
 
 #footerText {
 	text-align: center;
 	font-size: 12px;
-	color: #fff;
+	color: #DDDDDD;
+	padding-top: 30px;
 }
 
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -90px;
-}
 .footer, .push {
 height: 90px;
+clear: both;
 }
